@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<!--Copyright 2021 - Kyle Johnson
+   This program is free software: you can redistribute it and/or modify
+   it under the terms of the GNU General Public License as published by
+   the Free Software Foundation, either version 3 of the License, or
+   (at your option) any later version.
+
+   This program is distributed in the hope that it will be useful,
+   but WITHOUT ANY WARRANTY; without even the implied warranty of
+   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+   GNU General Public License for more details.
+
+   You should have received a copy of the GNU General Public License
+   along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<html lang="en">
+<head><title>Add Item</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+   <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+   <style>
+      /* Remove the navbar's default margin-bottom and rounded borders */
+            .navbar-inverse {
+              margin-bottom: 0; 
+              border-radius: 0;
+              border-color: #20572A; 
+              background-color : #135A46; 
+            } 
+             
+            .navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:focus{ 
+            	background-color: #00965C;
+            } 
+             
+            .navbar-inverse .navbar-nav > .active > a:hover{ 
+            	background-color: #289F71; 
+            } 
+             
+            .navbar-inverse .navbar-nav > li > a:hover{ 
+            	background-color: #289F71; 
+            } 
+            #mainJumbo { 
+                background-image: url("img/xpic7340.gif");
+                background-repeat: no-repeat; 
+                background-size : 100% , 100%; 
+                color: rgb(1, 150, 96); 
+            } 
+             
+            #mainJumbo p{ 
+                color: rgb(1, 150, 96); 
+            } 
+             
+            #topTextFrame{ 
+                background-color: aliceblue; 
+                margin-top: 10px; 
+                margin-bottom: 10px; 
+                margin-right: 10px; 
+            } 
+             
+            /* Add a gray background color and some padding to the footer */
+            footer { 
+        	     background-color: #f2f2f2; 
+              padding: 25px; 
+            } 
+   </style>
+</head> 
+        <body> 
+         
+        <nav class="navbar navbar-inverse"> 
+         <div class="container-fluid"> 
+            <div class="navbar-header"> 
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar"> 
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span> 
+                <span class="icon-bar"></span>                         
+              </button> 
+               
+            </div> 
+            <div class="collapse navbar-collapse" id="myNavbar"> 
+              <ul class="nav navbar-nav"> 
+		      <li class="active"><a href="#">Add</a></li>
+              </ul> 
+              <ul class="nav navbar-nav navbar-right"> 
+                 
+              </ul> 
+            </div> 
+          </div> 
+        </nav> 
+                <div class="container-fluid bg-3 text-center" style=" ">
+		  <div><p style="height: 10px; padding-bottom: 10%">
+		  </p></div>
+           <div class="container-fluid bg-3 text-center">     
+             <div class="row"> 
+             <div class="col-md-4"> 
+              </div> 
+              <div class="col-md-4">  
+                <div class="panel panel-default"> 
+				  <div class="panel-heading">Add New Item</div> 
+				    <div class="panel-body"> 
+					   <div> 
+						  <form role="form" id="create_form" onsubmit='submit()' > 
+							<div class="form-group"> 
+							  <label for="name">Name:</label> 
+							  <input type="text" class="form-control" id="name" placeholder="Enter Name" autofocus> 
+							</div> 
+							<div class="form-group"> 
+							  <label for="description">Description:</label> 
+							  <input type="text" class="form-control" id="description" placeholder="Enter Description"> 
+							</div>
+                     <div class="form-group"> 
+							  <label for="short_description">Short Description:</label> 
+							  <input type="text" class="form-control" id="short_description" placeholder="Enter Description"> 
+							</div> 
+                     <div class="form-group"> 
+							  <label for="price">Price:</label> 
+							  <input type="text" class="form-control" id="price" placeholder="Enter Price"> 
+							</div> 
+                     <div class="form-group"> 
+							  <label for="rating">Rating:</label> 
+							  <input type="text" class="form-control" id="rating" placeholder="Enter Rating"> 
+							</div> 
+                     <div class="form-group"> 
+							  <label for="num_in_stock">Number of Stock:</label> 
+							  <input type="text" class="form-control" id="num_in_stock" placeholder="Enter Stock"> 
+							</div> 
+                     <div class="form-group"> 
+							 <div class="form-group">
+                                                           <label for="sel1">Category:</label>
+                                                            <select class="form-control" id="sel1">
+                                                            <option>1</option>
+                                                            <option>2</option>
+                                                            </select>
+							</div> 
+                     <div class="form-group"> 
+							  <label for="pic_location">Picture 1 Location (Relative to webpage):</label> 
+							  <input type="text" class="form-control" id="pic_location" placeholder="Enter Location"> 
+							</div>
+
+							<button type="button" id='addButton' class="btn btn-default" >Submit</button> 
+						  </form> 
+						</div>
+				   </div> 
+                </div>
+              </div> 
+              <div class="col-lg-12">
+		      <h2>Response Text</h2>
+		      <p id="response-text">Ready To Send</p> 
+            </div> 
+         
+          </div> 
+        </div> 
+         
+          </div> 
+        </div><br> 
+        
+       <script src="supportScripts.js"></script>
+       
+        <footer class="container-fluid text-center"> 
+          
+        </footer>  
+
+        </body> 
+        </html>;
