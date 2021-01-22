@@ -63,6 +63,6 @@ add products into the databse.
 In the source directories there are api directories which house the PHP code. 
 
 config             Directory holds the information for connecting to the MySql Data.
-objects            Direcotry holds the classes used to abstract the sql queries.
+objects            Directory holds the classes used to abstract the sql queries.
 
 
